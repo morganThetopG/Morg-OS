@@ -293,10 +293,11 @@ def genesis():
         time.sleep(0.3)
         print("                     [Credit Screen] \n")
         time.sleep(0.4)
-        print("█▀▄▀█ ▄▀█ █▀▄ █▀▀   █▄▄ █▄█   █▀▄▀█ █▀█ █▀█ █▀▀ ▄▀█ █▄░█ ░░▄▀ ▀█▀ █▀█ ▀▄▀ █ █▀▀ █▀▀")
+        print("█▀▄▀█ ▄▀█ █▀▄ █▀▀   █▄▄ █▄█   █▀▄▀█ █▀█ █▀█ █▀▀ ▄▀█ █▄░█░░")
         time.sleep(0.4)
-        print("█░▀░█ █▀█ █▄▀ ██▄   █▄█ ░█░   █░▀░█ █▄█ █▀▄ █▄█ █▀█ █░▀█ ▄▀░░ ░█░ █▄█ █░█ █ █▄▄ █▄▄ \n")
+        print("█░▀░█ █▀█ █▄▀ ██▄   █▄█ ░█░   █░▀░█ █▄█ █▀▄ █▄█ █▀█ █░▀█░░\n")
         time.sleep(0.2)
+        print("and ben")
         genesis()
 
     elif uin=="nuke" or uin=="bomb":
@@ -391,3 +392,6 @@ while usr==False:
         
 while usr==True:
     genesis()
+    
+##Credits
+#Made By Ben & Morgan
