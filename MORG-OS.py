@@ -21,10 +21,11 @@ def hash():
 
 def calc():
     
-    num1=input("Enter number(1): ")
-    num2=input("Enter number(2): ")
-    sym=input("+,-,/,*: ")
-    
+    num1=input("Enter number(1) [Can't Use Letter Values]: ")
+    num2=input("Enter number(2) [Can't Use Letter Values]: ")
+    sym=input("+,-,/,* [Can't Use Letter Values]: ")
+
+
     if sym=="+":
         print(float(num1)+float(num2))
         genesis()
@@ -39,6 +40,8 @@ def calc():
         
     elif sym=="*":
         print(float(num1)*float(num2))
+        genesis()
+    else:
         genesis()
 
 
@@ -56,9 +59,9 @@ def guess():
         num = random.randint(1, 20)
         
         while a == False:
-            asw = input("Guess a number between 1 and 20: ")
+            asw = input("Guess a number between 1 and 20 [Can't Use Letter Values]: ")
             time.sleep(0.1)
-            
+
             if float(asw) == num:
                 print("Correct ")
                 win()
@@ -73,8 +76,14 @@ def guess():
 
 def counter():
     
-    cn=float(input("input a number to count to: "))
-    spd=float(input("input speed of counter: "))
+    cn=input("input a number to count to [Can't Use Letter Values]: ")
+    spd=input("input speed of counter [Can't Use Letter Values]: ")
+
+    
+
+    if float(cn) < 0 or float(spd < 0):
+        print("Invalid Number")
+        genesis() 
     
     for x in range(1, int(cn)+1):
             time.sleep(int(spd)/10)
@@ -271,7 +280,7 @@ def genesis():
         time.sleep(0.3)
         print("[Welcome To The Morg-OS Terminal]")
         time.sleep(0.3)
-        print("        [Credits Go To Toxicc] \n")
+        print("        [Credits Go To Morgan & Ben & Brian ] \n")
         print("")
         time.sleep(0.4)
         print("WELCOME")
@@ -293,11 +302,10 @@ def genesis():
         time.sleep(0.3)
         print("                     [Credit Screen] \n")
         time.sleep(0.4)
-        print("█▀▄▀█ ▄▀█ █▀▄ █▀▀   █▄▄ █▄█   █▀▄▀█ █▀█ █▀█ █▀▀ ▄▀█ █▄░█░░")
+        print("█▀▄▀█ ▄▀█ █▀▄ █▀▀   █▄▄ █▄█   █▀▄▀█ █▀█ █▀█ █▀▀ ▄▀█ █▄░█ ░░▄▀ ▀█▀ █▀█ ▀▄▀ █ █▀▀ █▀▀")
         time.sleep(0.4)
-        print("█░▀░█ █▀█ █▄▀ ██▄   █▄█ ░█░   █░▀░█ █▄█ █▀▄ █▄█ █▀█ █░▀█░░\n")
+        print("█░▀░█ █▀█ █▄▀ ██▄   █▄█ ░█░   █░▀░█ █▄█ █▀▄ █▄█ █▀█ █░▀█ ▄▀░░ ░█░ █▄█ █░█ █ █▄▄ █▄▄  & ben & brian \n")
         time.sleep(0.2)
-        print("and ben")
         genesis()
 
     elif uin=="nuke" or uin=="bomb":
@@ -345,7 +353,7 @@ def genesis():
 ## Username and password [LIMITED AMOUNT OF PASSWORD ATTEMPTS]
 
 print("[Welcome To The Morg-OS Terminal]")
-print("        [Credits Go To Toxicc] \n")
+print("        [Credits Go To Morgan Ben & Brian ] \n")
 
 usrn=input("Enter Username: ")
 
@@ -392,6 +400,3 @@ while usr==False:
         
 while usr==True:
     genesis()
-    
-##Credits
-#Made By Ben & Morgan
